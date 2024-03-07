@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title_respo_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            android:text="RESPONDING TEAMS:"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            />
+
+        <TextView
+            android:id="@+id/respo_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintLeft_toRightOf="@id/title_respo_dialog"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:text="0"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <CheckBox
+                    android:id="@+id/checkbox_team1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/central_fire_station_bauer_10"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/central_fire_station_bauer_23"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/central_fire_station_hino"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/central_fire_station_tanker"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/central_fire_station_ems"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/central_fire_station_srf"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ayala_fire_sub_station"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boalan_fire_sub_station"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                    android:id="@+id/checkbox_team9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calarian_fire_sub_station"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/culianan_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guiwan_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labuan_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lunzuran_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mampang_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manicahan_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mercedes_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/putik_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiniput_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recodo_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/san_jose_gusu_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sangali_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sta_catalina_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sta_maria_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/talon_talon_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/talisayan_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tetuan_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tumaga_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_team28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vitali_fire_sub_station"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/dialog_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/dialog_done_button"
+
+            android:text="@string/clear"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/dialog_done_button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/dialog_cancel_button"
+
+            android:text="@string/done"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".progress_report"
+    android:background="#171717">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:background="#1E1E1E"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title_appbar"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:text="PROGRESS"
+                    android:textColor="#F28500"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/owner_q13"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Name of Owner"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/owner_a13"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/damage_q14"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/owner_q13"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Estimated Damage"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/damage_a14"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/fatality_q15"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/damage_q14"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Fatality"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/fatality_a15"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/injured_q16"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/fatality_q15"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Injured"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/injured_a16"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/noofestab_q17"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/injured_q16"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Number of Establishment"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/noofestab_a17"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/famaffect_q18"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/noofestab_q17"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Number of Families Affected"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/famaffect_a18"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/nooftruck_q19"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/famaffect_q18"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="Number of Firetruck Responded"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/nooftruck_a19"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+
+            android:id="@+id/submit_progress"
+
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+
+            android:layout_marginTop="15dp"
+
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#F28500"
+            android:elevation="15dp"
+
+            android:gravity="center"
+            android:text="SUBMIT PROGRESS"
+            android:textColor="#171717"
+            android:textSize="15dp"
+
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nooftruck_q19"
+            tools:ignore="TextSizeCheck">
+
+        </Button>
+
+        <Button
+
+            android:id="@+id/proceed_complete"
+
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#F28500"
+            android:elevation="15dp"
+            android:gravity="center"
+
+            android:text="PROCEED COMPLETE"
+            android:textColor="#171717"
+            android:textSize="15dp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/submit_progress"
+            tools:ignore="TextSizeCheck">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

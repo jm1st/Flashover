@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".initial_report"
+    android:background="#171717">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ScrollViewSize">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:background="#1E1E1E"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/title_appbar"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+
+                        android:text="INITIAL"
+                        android:textColor="#F28500"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/location_q1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+
+            style="@style/OutlinedBoxWhite"
+            android:orientation="vertical"
+
+            android:elevation="15dp"
+
+            android:hint="@string/location"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/location_a1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="textMultiLine"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/typeofincident_q2"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/location_q1"
+
+            style="@style/CustomExposedDropdownMenu"
+
+            android:hint="@string/type_of_incident"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            >
+
+            <AutoCompleteTextView
+
+                android:id="@+id/typeofincident_a2"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="#FFFFFF"
+                android:inputType="text"
+                android:editable="false"
+                android:focusable="false"
+
+                android:backgroundTint="@null"
+
+                tools:ignore="Deprecated,LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/respondingteam_q3"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/typeofincident_q2"
+
+            android:hint="@string/responding_team"
+            android:textColorHint="@color/white"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+
+            style="@style/OutlinedBoxWhite"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/respondingteam_a3"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="#FFFFFF"
+                android:inputType="textMultiLine|textCapSentences"
+                android:editable="false"
+                android:focusable="false"
+
+                android:backgroundTint="@null"
+
+                tools:ignore="Deprecated" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/reported_q4"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/respondingteam_q3"
+
+            style="@style/OutlinedBoxWhite"
+
+
+            android:elevation="15dp"
+
+            android:hint="@string/time_and_date_reported"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/reported_a4"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:focusable="false"
+
+                android:textColor="@color/white"
+                tools:ignore="Deprecated" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/involved_q5"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/reported_q4"
+
+            style="@style/CustomExposedDropdownMenu"
+
+            android:hint="@string/involved"
+            android:textColorHint="@color/white"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            >
+
+            <AutoCompleteTextView
+
+                android:id="@+id/involved_a5"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="#FFFFFF"
+                android:inputType="text"
+                android:editable="false"
+                android:focusable="false"
+
+                android:backgroundTint="@null"
+                tools:ignore="Deprecated,LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/alarm_q6"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/involved_q5"
+
+            style="@style/CustomExposedDropdownMenu"
+
+            android:hint="@string/alarm_status"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            >
+
+            <AutoCompleteTextView
+
+                android:id="@+id/alarm_a6"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="#FFFFFF"
+                android:inputType="text"
+                android:editable="false"
+                android:focusable="false"
+
+                android:backgroundTint="@null"
+                tools:ignore="Deprecated,LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/arrival_q7"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/alarm_q6"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="@string/time_of_arrival"
+            android:textColorHint="@color/white"
+            android:editable="false"
+            android:focusable="false"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/arrival_a7"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:focusable="false"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/fireout_q8"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/arrival_q7"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="@string/fire_out"
+            android:textColorHint="@color/white"
+            android:editable="false"
+            android:focusable="false"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/fireout_a8"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/white"
+                android:editable="false"
+                android:focusable="false"
+                tools:ignore="VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/groundcom_q9"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/fireout_q8"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="@string/ground_commander"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/groundcom_a9"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/groundno_q10"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/groundcom_q9"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="@string/contact_number"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/groundno_a10"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/fireindia_q11"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/groundno_q10"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="@string/fire_investigator"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/fireindia_a11"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/fireindiano_q12"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/fireindia_q11"
+
+            style="@style/OutlinedBoxWhite"
+
+            android:elevation="15dp"
+
+            android:hint="@string/contact_number_initial"
+            android:textColorHint="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/fireindiano_a12"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+
+            android:id="@+id/submit_initial"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintTop_toBottomOf="@id/fireindiano_q12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:elevation="15dp"
+            android:gravity="center"
+            android:backgroundTint="#F28500"
+
+            android:text="@string/submit_initial"
+            android:textColor="#171717"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize">
+        </Button>
+
+        <Button
+
+            android:id="@+id/proceed_progress"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+
+            app:layout_constraintTop_toBottomOf="@id/submit_initial"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:elevation="15dp"
+            android:gravity="center"
+            android:backgroundTint="#F28500"
+
+            android:text="@string/proceed_progress"
+            android:textColor="#171717"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize">
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
